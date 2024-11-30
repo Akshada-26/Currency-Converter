@@ -12,24 +12,26 @@
         
         <h1>Currency Converter</h1>
         <div class="converter">
-            <label>Enter Amount</label>
-            <input type="number" id="amount" placeholder="100">
+            <label for="amount">Enter Amount
+            <input type="number" id="amount" placeholder="100" required></label>
             <br>
             <center>
-            <select>
+            <select id="currency-from">
                 <option>USD - United States Dollar</option>
                 <option>INR - Indian Rupee</option>
             </select>    
                 <span>TO</span>
-            <select>
+            <select id="currency-to">
                 <option>USD - United States Dollar</option>
                 <option>INR - Indian Rupee</option>
             </select>
             </center>
             <br>
             <button onclick="currencyConverter()">Convert</button>
+            <div id="result" class="hidden">100 USD = 8,407,52 INR</div>
+            <div id="error" class="hidden">An error occured, please try again later</div>
         </div>
     </div>         
-    
+    <script src="script.js"></script>
 </body>
 </html>

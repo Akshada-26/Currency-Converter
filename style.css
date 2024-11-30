@@ -55,3 +55,19 @@ body
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  
+  #result {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
