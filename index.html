@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        
-        <h1>Currency Converter</h1>
-        <div class="converter">
-            <label for="amount">Enter Amount
-            <input type="number" id="amount" placeholder="100" required></label>
-            <br>
-            <center>
-            <select id="currency-from">
-                <option>USD - United States Dollar</option>
-                <option>INR - Indian Rupee</option>
-            </select>    
-                <span>TO</span>
-            <select id="currency-to">
-                <option>USD - United States Dollar</option>
-                <option>INR - Indian Rupee</option>
-            </select>
-            </center>
-            <br>
-            <button onclick="currencyConverter()">Convert</button>
-            <div id="result" class="hidden">100 USD = 8,407,52 INR</div>
-            <div id="error" class="hidden">An error occured, please try again later</div>
-        </div>
-    </div>         
-    <script src="script.js"></script>
+  <div class="container">
+       <h1>Currency Converter</h1>
+       <label for="amount">Amount:</label>
+       <input type="number" id="amount" placeholder="Enter amount">
+       <label for="from-currency">From Currency:</label>
+       <center>
+               <div class="dropdown" id="from-dropdown">
+               <button class="dropbtn">Select Currency</button>
+               <div class="dropdown-content" id="from-currency"></div>
+               </div>
+               <label for="convert">To</label>
+               <div class="dropdown" id="to-dropdown">
+               <button class="dropbtn">Select Currency</button>
+               <div class="dropdown-content" id="to-currency"></div>
+               </div>
+              <button id="convert">Convert</button>
+    </center>
+             <div id="result" class="hidden"></div>
+             <div id="error" class="hidden"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
