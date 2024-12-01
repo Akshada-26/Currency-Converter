@@ -1,6 +1,6 @@
- ## Currency Converter App
+ ## Currency Converter 
 
-A **Currency Converter App** that allows users to convert amounts between two currencies using real-time exchange rates. The app features a clean, responsive design, built with semantic HTML, CSS, and JavaScript. It fetches data dynamically from APIs to populate the currency dropdowns and performs live conversions using an Exchange Rate API.
+A **Currency Converter** that allows users to convert amounts between two currencies using real-time exchange rates. The app features a clean, responsive design, built with semantic HTML, CSS, and JavaScript. It fetches data dynamically from APIs to populate the currency dropdowns and performs live conversions using an Exchange Rate API.
 
 ---
 
