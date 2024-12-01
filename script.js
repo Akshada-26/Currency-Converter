@@ -71,12 +71,43 @@ async function fetchAndPopulateDropdowns()
   fetchAndPopulateDropdowns();
   document.getElementById("convert").addEventListener("click", convertCurrency);
   
-  function convertCurrency() 
-  {
+  async function convertCurrency() {
     const amount = parseFloat(document.getElementById("amount").value);
     const fromCurrency = document.querySelector("#from-dropdown .dropbtn").dataset.value;
     const toCurrency = document.querySelector("#to-dropdown .dropbtn").dataset.value;
+  
+    if (isNaN(amount) || !fromCurrency || !toCurrency) {
+      displayMessage("error", "Please enter a valid amount and select currencies.");
+      return;
+    }
+  
+    try {
+      const apiKey = "cff7ea68a0f133c032abb607";
+      const url = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${fromCurrency}/${toCurrency}`;
+  
+    
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Failed to fetch conversion rate.");
+      }
+  
+      const data = await response.json();
+      if (data.result !== "success") {
+        throw new Error("Conversion data unavailable.");
+      }
+  
+      
+      const conversionRate = data.conversion_rate;
+      const convertedAmount = (amount * conversionRate).toFixed(2);
+  
+      
+      displayMessage("result", `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`);
+    } catch (error) {
+      console.error("Error converting currency:", error);
+      displayMessage("error", "Failed to convert currency. Please try again.");
+    }
   }
+  
   
   
   
