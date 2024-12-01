@@ -7,7 +7,7 @@ A **Currency Converter** that allows users to convert amounts between two curren
 ### Features
 - **Real-Time Exchange Rates**: Uses a live API to fetch up-to-date conversion rates.
 - **Dynamic Dropdowns**: Currency options with flags and full names are dynamically populated.
-- **Responsive Design**: Fully responsive layout with clean UI elements.
+- **Responsive Design**: Fully responsive layout with clean UI elements
 - **Error Handling**: Displays error messages for invalid inputs or API issues.
 - **Interactive UI**: Highlight effects and shadows make the design visually appealing.
 
